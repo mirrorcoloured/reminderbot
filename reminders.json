@@ -1,0 +1,12 @@
+[
+    {
+        "Message": "Check on dog",
+        "Interval": 0.5,
+        "Unit": "h"
+    },
+    {
+        "Message": "Switch sit/stand",
+        "Interval": 1,
+        "Unit": "h"
+    }
+]
