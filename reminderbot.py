@@ -15,10 +15,10 @@ with open(filename, "r") as f:
 
 
 # Calculates the next time this reminder should happen
-def calculate_next(reminder, use_offset=False):
+def calculate_next(reminder, only_offset=False):
     value = reminder["Interval"]
-    if use_offset:
-        value += reminder.get("Offset", 0)
+    if only_offset:
+        value = reminder.get("Offset", 0)
 
     if reminder["Unit"] == "s":
         reminder["Next"] += timedelta(seconds=value)
@@ -68,7 +68,7 @@ def list_reminders():
 now = datetime.now()
 for reminder in reminders:
     reminder["Next"] = now
-    calculate_next(reminder, use_offset=True)
+    calculate_next(reminder, only_offset=True)
 # Sort so next reminder is first in array
 reminders.sort(key = lambda x: x["Next"])
 if verbose: list_reminders()
