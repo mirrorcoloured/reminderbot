@@ -5,8 +5,15 @@
         "Unit": "h"
     },
     {
-        "Message": "Switch sit/stand",
-        "Interval": 1,
-        "Unit": "h"
+        "Message": "Stand",
+        "Interval": 60,
+        "Unit": "m",
+	    "Offset": 0
+    },
+    {
+        "Message": "Sit",
+        "Interval": 60,
+        "Unit": "m",
+        "Offset": 20
     }
 ]
